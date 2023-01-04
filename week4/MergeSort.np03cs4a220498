@@ -1,0 +1,61 @@
+import java.util.*;
+public class MergeSort {
+    public static void getInput(ArrayList<Integer> list) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the length of array: ");
+        int size = sc.nextInt();
+        for (int i = 0; i < size; i++) {
+            System.out.println("Enter the number for index " + i);
+            list.add(sc.nextInt());
+        }
+        System.out.println("Unsorted array: ");
+        System.out.println(list);
+    }
+     public static void getOutput(ArrayList<Integer> list) {
+        System.out.println("Sorted Array: ");
+        System.out.print("[");
+        for (int i = 0; i < list.size(); i++) {
+            if (i == list.size() - 1) {
+                System.out.print(list.get(i));
+            } else {
+                System.out.print(list.get(i) + ", ");
+            }
+        }
+        System.out.print("]");
+    }
+    public static void merge(ArrayList<Integer> list, int begin, int middle, int end) {
+        int beginning = begin;
+        int middleIndex = middle + 1;
+        int ending = end;
+
+        while (beginning <= middleIndex && middleIndex <= ending) {
+            if (list.get(beginning) > (list.get(middleIndex))){
+                list.add(beginning, list.remove(middleIndex));
+                beginning++;
+                middleIndex++;
+            } else if (Objects.equals(list.get(beginning), list.get(middleIndex))) {
+                list.add(beginning , list.remove(middleIndex));
+                beginning++;
+                middleIndex++;
+            } else {
+                beginning++;
+            }
+        }
+    }
+    public static void sort(ArrayList<Integer> list, int begin, int end) {
+        if(begin<end) {
+            int middle = (begin + end) / 2;
+            sort(list, begin, middle);
+            sort(list,middle+1, end);
+            merge(list, begin, middle, end);
+        }
+    }
+
+    public static void main(String[] args) {
+        MergeSort ob = new MergeSort();
+        ArrayList<Integer> list = new ArrayList<>();
+        ob.getInput(list);
+        ob.sort(list, 0, list.size()-1);
+        ob.getOutput(list);
+    }
+}
