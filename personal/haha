@@ -1,25 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="personal.css">
-</head>
-<body>
-    <nav class="navbar">
-    </nav>
 
-    <section id ="home">
-      <div class="main">
-        <h1 class="heading">I AM <br> RAKSHA KHADKA</h1>
-        <button class="btn">
-          hello
-        </button>
-      </div>
-    </section>
-    <h1>Hello this is Raksha.</h1>
-</body>
-</html>
-   
-   
+*{ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0 ,0 ,0 ,0.5);
+  position: sticky;
+  top: 0;
+}
+.navber ul{
+  display: flex;
+  list-style: none;
+  margin: 20px 0px;
+}
+.navbar ul li{
+  font-family: century;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: black;
+  padding: 8px 25px;
+  transition: all .5s ease;
+}
+.navbar ul li a:hover{
+  background-color: aqua;
+  color: black;
+  box-shadow: 0 0 10px whitesmoke;
+}
+
+/* Home Section */
+#home{
+  display:flex;
+  flex-direction: column;
+  background-color: aquamarine(0, 0, 0, 0.5);
+  height: 840px;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+}
+#home::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url('image.jpg') no-repeat center center/cover;
+  height:900px;
+  width: 100%;
+}
+.main{
+  display: flex;
+  flex-direction: column-reverse;
+  /*border:1px solid white;*/
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  right:10%
+}
+.herading{
+  font-family: century;
+  font-size: 3rem;
+  text-align:center;
+  margin: 40px 0px;
+}
+.btn{
+  padding:10px 40px;
+  background-color: transparent;
+  border:1px solid whitesmoke;
+  color: bisque;
+  outline: none;
+  transition: .6s ease;
+}
+.btn:hover{
+  cursor: pointer;
+  background-color: aquamarine;
+  color: black;
+  box-shadow: 0 0 5px whitesmoke,0 0 10 px whitesmoke,0 0 15 px wheat;
+  font-weight:blod;
+}
+
+/*About Section /*

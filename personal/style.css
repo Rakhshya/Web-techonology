@@ -1,0 +1,95 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Navbar */
+.navbar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+}
+navber ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+  }
+  .navbar ul li{
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+.navbar ul li a{
+  text-decoration: none;
+  color: black;
+  padding: 8px 25px;
+  transition: all .5s ease;
+}
+.navbar ul li a:hover{
+    background-color: aqua;
+    color: black;
+    box-shadow: 0 0 10px whitesmoke;
+  }
+  /* Home Section */
+#home{
+    display:flex;
+    flex-direction: column;
+    background-color: aquamarine(0, 0, 0, 0.5);
+    height: 840px;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('haha.jpg') no-repeat center center/cover;
+    height:900px;
+    width: 100%;
+  }
+  
+  
+  .herading{
+    font-family: century;
+    font-size: 2rem;
+    text-align:center;
+    margin: 40px 0px;
+  }
+  .btn{
+    padding:10px 40px;
+    background-color: transparent;
+    border:5px solid whitesmoke;
+    color: blueviolet;
+    outline: none;
+    transition: -4s ease;
+  }
+  .btn:hover{
+    cursor: pointer;
+    background-color: aquamarine;
+    color: black;
+    box-shadow: 0 0 5px whitesmoke,0 0 10 px whitesmoke,0 0 15 px wheat;
+    font-weight:blod;
+  }
+  
+  /*About Section */
+  #about{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+  }
+  #pic{
+    display: flex;
+  }
+#pic img{
+    width: 575px;
+    height:400;
+}
+  
